@@ -7,34 +7,30 @@ public class Main {
         int d1= sc.nextInt();
         int m2= sc.nextInt();
         int d2= sc.nextInt(); int cnt=0;
+
         if(m1==m2){
-            System.out.print(m2-m1+1);
+            System.out.print(d2-d1+1);
         }else{
-            while(true){
-                if(m1==m2&&d1==d2){
-                    break;
-                }else if(m1==m2){
-                    if(d1>d2){
-                        cnt-=d1-d2-1;
-                    }else if(d1<d2){
-                        cnt+=d2-d1+1;
-                    }
-                }else{
-                    if(m1==2){
+            for(int i=m1; i<m2; i++){
+                if(i==2){
                         cnt+=28;
-                    }else if(m1<8 && m1%2!=0){
+                    }else if(i<8 && i%2!=0){
                         cnt+=31;
-                    }else if(m1<8 && m1%2==0){
+                    }else if(i<8 && i%2==0){
                         cnt+=30;
-                    }else if(m1>7 && m1%2==0){
+                    }else if(i>7 && i%2==0){
                         cnt+=31;
                     }else{
                         cnt+=30;
                     }
-                    m1++;
-                }
             }
-            System.out.print(cnt);
+            if(d1>d2){
+               cnt-=d1-d2-1; 
+            }else if(d1<d2){
+                cnt+=d2-d1+1;
+            }         
+            System.out.print(cnt);     
+            }
+           
         }
     }
-}
