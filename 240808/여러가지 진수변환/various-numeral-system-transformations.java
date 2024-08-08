@@ -8,7 +8,7 @@ public class Main {
         int[]num= new int[100];
         int cnt=0;
         while(true){
-            if(n<4){
+            if(n<a){
                 num[cnt]=n;
                 break;
             }else{
