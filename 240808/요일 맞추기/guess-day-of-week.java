@@ -11,15 +11,15 @@ public class Main {
         String[]left={"Sun","Mon","Tue","Wed","Thu","Fri","Sat"};
         //달
         if(m1==m2){
-           cnt+= d2-d1+1;
+           cnt+= d2-d1;
         }else{
-            cnt+=month[m1-1]-d1+1;
-            for(int i=m1+1; i<m2; i++){
-            cnt=cnt+month[i-1];
+            cnt+=month[m1-1]-d1;
+            for(int i=m1; i<m2-1; i++){
+            cnt=cnt+month[i];
         }
             cnt+=d2;
         }
-    
-        System.out.print(left[cnt%7]);
+        
+        System.out.print(left[(cnt+1)%7]);
     }
 }
