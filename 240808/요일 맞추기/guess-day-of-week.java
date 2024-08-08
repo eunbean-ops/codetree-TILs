@@ -19,11 +19,7 @@ public class Main {
         }
             cnt+=d2;
         }
-        if(cnt<0){
-            cnt=cnt*-1;
-        }
-        
-
+    
         System.out.print(left[cnt%7]);
     }
 }
