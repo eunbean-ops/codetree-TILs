@@ -12,7 +12,7 @@ public class Main {
             int x2= sc.nextInt()+100;
             int y2= sc.nextInt()+100;
             
-            for(int j=y1; j<=y2; j++){
+            for(int j=y1; j<y2; j++){
                 for(int k=x1; k<x2; k++){
                     rect[j][k]++;
                 }
@@ -21,6 +21,8 @@ public class Main {
         for(int j=0; j<201; j++){
                 for(int k=0; k<201; k++){
                     if( rect[j][k]==1){
+                        cnt++;
+                    }else if(rect[j][k]==2){
                         cnt++;
                     }
                 }
