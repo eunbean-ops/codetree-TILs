@@ -22,7 +22,7 @@ public class Main {
                 for(int k=0; k<201; k++){
                     if( rect[j][k]==1){
                         cnt++;
-                    }else if(rect[j][k]==2){
+                    }else if(rect[j][k]>1){
                         cnt++;
                     }
                 }
