@@ -7,15 +7,15 @@ public class Main {
         int []num= new int[255];
         for(int i=0; i<k; i++){
             int a= sc.nextInt(); int aa= a+100;
-            int b= sc.nextInt(); int bb= b+100;
+            int b= sc.nextInt(); int bb= b+100-1;
 
             for(int j=aa; j<=bb; j++){
                 num[j]++;
             }
         }
         int max=0;
-        for(int i=1; i<num.length-1; i++){
-            if((num[i]==num[i-1] || num[i]==num[i+1])&&num[i]>max){
+        for(int i=0; i<num.length-1; i++){   
+            if(num[i]>max){
                 max=num[i];
             }
         }
