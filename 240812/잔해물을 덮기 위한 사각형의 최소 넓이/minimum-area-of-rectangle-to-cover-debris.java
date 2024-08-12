@@ -39,6 +39,9 @@ public class Main {
                 if(rect[i][j]==1){
                     cnt++;
                     tr=true;
+                }else if(rect[i][j]>3){
+                    cnt++;
+                    tr=true;
                 }
             }
             if(cnt>maxwid){
@@ -49,6 +52,7 @@ public class Main {
             }
         }
         System.out.println(leg*maxwid);
+        
     
     }
 }
