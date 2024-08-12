@@ -15,12 +15,14 @@ public class Main {
                 }
             }
         }
-
+        int check1= 0;//가로
+        int check2=0;//세로
         for(int i=0; i<1; i++){
             int x1=sc.nextInt()+1000;
             int y1=sc.nextInt()+1000;
             int x2=sc.nextInt()+1000;
             int y2=sc.nextInt()+1000;
+            check1=x2-x1; check2=y2-y1;
             for(int j=y1; j<y2; j++){
                 for(int k=x1; k<x2; k++){
                     rect[j][k]+=3;
@@ -39,7 +41,7 @@ public class Main {
                 if(rect[i][j]==1){
                     cnt++;
                     tr=true;
-                }else if(rect[i][j]>3){
+                }else if(rect[i][j]>3&&((rect[i+check2][j]==1) || (rect[i][j+check1]==1))){
                     cnt++;
                     tr=true;
                 }
