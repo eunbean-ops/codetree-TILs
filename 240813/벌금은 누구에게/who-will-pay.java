@@ -13,7 +13,7 @@ public class Main {
         }
         for(int i=0; i<m; i++){
             list[pp[i]-1]++;
-            if(list[pp[i]-1]++ >= k){
+            if(list[pp[i]-1]>= k){
                 System.out.print(pp[i]);
                 break;
             }
