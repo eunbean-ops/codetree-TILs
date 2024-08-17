@@ -35,18 +35,25 @@ public class Main {
                 }
             }
         }
-        person[P-1]=1; int cnt=0;
-        if(K>T){
-            cnt=T;
-        }else{
-            cnt=K;
+        int[]cnt= new int[N];
+        person[P-1]=1; cnt[P-1]=K;
+        
+        for(int i=0; i<T; i++){
+            if((person[x[i]-1]==1 && cnt[x[i]-1]>0) && person[y[i]-1]!=1){
+            cnt[x[i]-1]--;
+            cnt[y[i]-1]=K;
+            person[y[i]-1]=1;
+        }else if((person[y[i]-1]==1 && cnt[y[i]-1]>0) && person[x[i]-1]!=1){
+            cnt[y[i]-1]--;
+            cnt[x[i]-1]=K;
+            person[x[i]-1]=1;
+        }else if(person[x[i]-1]==1 && person[y[i]-1]==1 ){
+            cnt[x[i]-1]--;
+            cnt[y[i]-1]--;
         }
-        for(int i=0; i<cnt; i++){
-            if(person[x[i]-1]==1 || person[y[i]-1]==1){
-               person[x[i]-1]=1;
-               person[y[i]-1]=1;          
-            }
+
         }
+        
         for(int i=0; i<person.length; i++){
             System.out.print(person[i]);
         }
