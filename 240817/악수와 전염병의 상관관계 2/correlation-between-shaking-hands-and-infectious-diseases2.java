@@ -35,9 +35,13 @@ public class Main {
                 }
             }
         }
-        person[P-1]=1;
-        
-        for(int i=0; i<K; i++){
+        person[P-1]=1; int cnt=0;
+        if(K>T){
+            cnt=T;
+        }else{
+            cnt=K;
+        }
+        for(int i=0; i<cnt; i++){
             if(person[x[i]-1]==1 || person[y[i]-1]==1){
                person[x[i]-1]=1;
                person[y[i]-1]=1;          
