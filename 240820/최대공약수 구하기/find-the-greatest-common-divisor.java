@@ -12,7 +12,7 @@ public class Main {
         
         while(true){
              boolean zz=false;
-            for(int i=2; i<10; i++){
+            for(int i=2; i<12; i++){
                 if(n%i==0 && m%i==0){
                     result=result*i;
                     n=n/i; m=m/i;
