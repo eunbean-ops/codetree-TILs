@@ -10,9 +10,8 @@ public class Main {
     }
     public static int min(int a, int b, int c){
         int ans=0;
-        ans=Math.min( a, b);
-        ans=Math.min( b, c);
-        ans=Math.min( a, c);
+        ans=Math.min( a, Math.min(b,c));
+        
         return ans;
     }
 }
