@@ -9,9 +9,17 @@ public class Main {
         System.out.print(min(a,b,c));
     }
     public static int min(int a, int b, int c){
-        int ans=0;
-        ans=Math.min( a, Math.min(b,c));
+        int mm=100;
+        if(a<mm){
+            mm=a;
+        }
+        if(b<mm){
+            mm=b;
+        }
+        if(c<mm){
+            mm=c;
+        }
         
-        return ans;
+        return mm;
     }
 }
